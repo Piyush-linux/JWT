@@ -1,4 +1,51 @@
-doctype html5
-html
-	head
-		title Authentication
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	title Authentication
+	//- font
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Croissant+One&display=swap' rel='stylesheet')
+	//- lib
+	script(src='https://code.iconify.design/1/1.0.7/iconify.min.js')
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css' integrity='sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q==' crossorigin='anonymous' referrerpolicy='no-referrer')
+	//- <link rel="stylesheet" type="text/css" href="/home/piyush/Documents/Lib/bulma.min.css">
+	link(rel='stylesheet' href="css/style.css").
+section.section
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob">
+<path fill="#FA4D56" d="M55.4,-15.2C63.9,8.1,57.4,39.1,40.4,50.2C23.3,61.3,-4.2,52.5,-20.7,38.2C-37.2,23.9,-42.6,4.2,-37.3,-14.8C-32,-33.7,-16,-51.8,3.7,-53C23.5,-54.3,47,-38.6,55.4,-15.2Z" transform="translate(100 100)" />
+</svg>
+	.container
+		.columns.box.form
+			.column.is-5.has-background-primary.form_sec_1.cen.has-text-centered
+				h1.h1.has-text-white
+					| Welcome Back !
+				p.p1.has-text-white-ter.has-text-centered.px-3.py-4
+					| To keep connected with us please login with your personal info
+				button.button.is-light.is-outlined.is-large.is-rounded.has-text-weight-bold
+					| Login
+			.column.is-7.form_sec_2.has-text-centered.cen(style='align-items: unset;')
+				h1.h1.has-text-primary
+					| Create Account
+				p.content.has-text-grey
+					| Not Yet connected , register with your email
+				form(action='')
+					.field.m-2
+						.control.is-expanded.has-icons-right
+							input.input.is-large(type='text' placeholder='Name' required)
+							span.icon.is-small.is-right
+								span.iconify(data-icon='bi:person-circle' data-inline='false')
+					.field.m-2
+						.control.is-expanded.has-icons-right
+							input.input.is-large(type='email' placeholder='Email' required)
+							span.icon.is-right
+								span.iconify(data-icon='topcoat:email' data-inline='false')
+					.field.m-2
+						.control.is-expanded.has-icons-right
+							input.input.is-large(type='password' placeholder='Password' required)
+							span.icon.is-right
+								span.iconify(data-icon='fluent:lock-closed-20-filled' data-inline='false')
+					.field.m-4
+						.control
+							input.button.is-primary.is-large.is-rounded.has-text-weight-bold(type='submit' value='SING UP')

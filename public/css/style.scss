@@ -1,0 +1,65 @@
+// var
+
+// media
+@mixin mobile{
+@media screen and (max-width:750px){
+    @content;
+}
+}
+
+// pre
+body,
+.button {
+    font-family: Croissant One;
+}
+
+.iconify {
+    font-size: 2rem;
+}
+
+.h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.p1 {
+    font-size: 1.3rem;
+}
+
+.cen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_sec_1 {
+    height: 80vh;
+}
+
+.form_sec_2 {
+    height: 80vh;
+}
+
+/* media */
+@media screen and (max-width: 750px) {
+    .form_sec_1 {
+        height: 70vh;
+    }
+
+    .form_sec_2 {
+        height: 80vh;
+    }
+
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .p1 {
+        font-size: 1.1rem;
+    }
+
+    .box {
+        padding: 0;
+    }
+}

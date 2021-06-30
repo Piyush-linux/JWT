@@ -1,13 +1,12 @@
 
-- [ ] add : JWT
 - [ ] R&D : site's to deploy F+B app
-- [ ] dev : /test/index.html
 - [ ] future : usr del profile , update psw 
 
 
 > Remmebr to open mongodb atlas to begin operation or chenge IP but related to MongoDB_Atlas Only
 
 # Frontend
+https://ionify.com/
 ```yaml
 !Asset
 col: [pr: 1abc9c, bg: ecf0f1]
@@ -31,8 +30,14 @@ col-2:
 /.env
 /node_modules
 /server.js
-/router/auth.js
+/middleware/jwt.js
+/router/{ auth.js , profile.js }
 /model/{ user.js , validation.js }
+/views/{index.pug , /partial/(navbar.pug , footer.pug...) }
+/public
+    /css/{style.css,lib.css}
+    /js/form.js
+    /img/
 /README.md
 ```
 1. Server Listening
