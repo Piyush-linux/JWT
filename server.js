@@ -26,6 +26,6 @@ app.use('/api/profile',profile);
 
 
 // Server running
-app.listen(3000||process.env.PORT)
+app.listen(3000 || process.env.PORT)
 
 
