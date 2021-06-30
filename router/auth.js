@@ -1,8 +1,9 @@
-const express = require('express')
+const express = require("express")
 const bcrypt = require("bcrypt")
+const jwt  = require("jsonwebtoken")
 const router = express.Router()
 const users = require("../model/user.js")
-const {reg_vli, log_vli} = require('../model/validation.js')
+const {reg_vli, log_vli} = require("../model/validation.js")
 
 // register post
 router.post('/register', async (req, res) => {
@@ -46,8 +47,9 @@ router.post("/login",async(req,res)=>{
     // decode
     const psw_chk = bcrypt.compare(req.body.password,usr.password);
     if(!psw_chk) return res.status(400).send("wrong eml or password")
-    // login
-    res.send("Logged in !")
+    // JWT token(id,psw) : encode > append
+    const token = jwt.sign({_id: usr._id },process.env.TOKEN)
+    res.header('auth-token',token).send(token)
 })
 
 module.exports = router;

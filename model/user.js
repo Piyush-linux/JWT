@@ -1,5 +1,9 @@
 const mongoose = require("mongoose")
-
+/*
+rules={
+	name: [5 < sting < 10]
+}
+*/
 const user_schema = new mongoose.Schema({
 	name:{
 		type: String,

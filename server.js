@@ -5,6 +5,7 @@ const express = require('express')
 const app = express()
 const mongoose = require("mongoose")
 const auth = require("./router/auth.js");
+const profile = require("./router/profile.js");
 dotenv.config()
 
 // conect to DB
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // mid: router's
 app.use('/api/user',auth);
+app.use('/api/profile',profile);
 
 
 // Server running
