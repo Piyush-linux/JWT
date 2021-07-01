@@ -7,6 +7,7 @@ const mongoose = require("mongoose")
 const auth = require("./router/auth.js");
 const profile = require("./router/profile.js");
 const root = require("./router/gets.js")
+const PORT = process.env.PORT || 3000
 dotenv.config()
 
 // conect to DB
@@ -26,6 +27,8 @@ app.use('/api/profile',profile);
 
 
 // Server running
-app.listen(3000 || process.env.PORT)
+app.listen(PORT,()=>{
+	console.log('running...')
+})
 
 
