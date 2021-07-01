@@ -27,7 +27,7 @@ app.use('/api/profile',profile);
 
 
 // Server running
-app.listen(PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
 	console.log('running...')
 })
 
