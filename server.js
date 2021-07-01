@@ -21,7 +21,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // mid: router's
-app.get('/',root);
+app.get("/",(req,res)=>{
+	res.render("index")
+})
+app.use('/',root);
 app.use('/api/user',auth);
 app.use('/api/profile',profile);
 
