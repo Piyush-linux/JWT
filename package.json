@@ -4,7 +4,8 @@
   "description": "JWT authentication",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.15",
     "pug": "^3.0.2"
+  },
+  "engines":{
+    "node":"^10.24.0",
+    "npm":"^7.16.0"
   }
 }
