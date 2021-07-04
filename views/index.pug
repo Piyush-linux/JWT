@@ -17,35 +17,64 @@ section.section
 <path fill="#FA4D56" d="M55.4,-15.2C63.9,8.1,57.4,39.1,40.4,50.2C23.3,61.3,-4.2,52.5,-20.7,38.2C-37.2,23.9,-42.6,4.2,-37.3,-14.8C-32,-33.7,-16,-51.8,3.7,-53C23.5,-54.3,47,-38.6,55.4,-15.2Z" transform="translate(100 100)" />
 </svg>
 	.container
-		.columns.box.form
+		.columns.box.form.is-vcentered
 			.column.is-5.has-background-primary.form_sec_1.cen.has-text-centered
 				h1.h1.has-text-white
 					| Welcome Back !
 				p.p1.has-text-white-ter.has-text-centered.px-3.py-4
 					| To keep connected with us please login with your personal info
-				button.button.is-light.is-outlined.is-large.is-rounded.has-text-weight-bold
+				button.button.is-light.is-outlined.is-large.is-rounded.has-text-weight-bold#log_btn
 					| Login
-			.column.is-7.form_sec_2.has-text-centered.cen(style='align-items: unset;')
+				button.button.is-light.is-outlined.is-large.is-rounded.has-text-weight-bold#reg_btn
+					| Register
+			.column.is-7.form_sec_2.has-text-centered.cen#register(style='align-items: unset;')
 				h1.h1.has-text-primary
 					| Create Account
 				p.content.has-text-grey
 					| Not Yet connected , register with your email
-				form(action='')
+				form(action='/user/register' method="POST")
+					//- name
 					.field.m-2
 						.control.is-expanded.has-icons-right
 							input.input.is-large(type='text' placeholder='Name' required)
 							span.icon.is-small.is-right
 								span.iconify(data-icon='bi:person-circle' data-inline='false')
+					//- email
 					.field.m-2
 						.control.is-expanded.has-icons-right
 							input.input.is-large(type='email' placeholder='Email' required)
 							span.icon.is-right
 								span.iconify(data-icon='topcoat:email' data-inline='false')
+					//- pasw
 					.field.m-2
 						.control.is-expanded.has-icons-right
 							input.input.is-large(type='password' placeholder='Password' required)
 							span.icon.is-right
 								span.iconify(data-icon='fluent:lock-closed-20-filled' data-inline='false')
+					//- sbm
 					.field.m-4
 						.control
 							input.button.is-primary.is-large.is-rounded.has-text-weight-bold(type='submit' value='SING UP')
+			.column.is-7.form_sec_2.has-text-centered.cen.pt-6.py-3#login(style='align-items: unset;')
+				h1.h1.has-text-primary
+					| Login Account
+				p.content.has-text-grey
+					| Get connected , Login with your email
+				form(action='/user/login' method="POST")
+					//- email
+					.field.m-2
+						.control.is-expanded.has-icons-right
+							input.input.is-large(type='email' placeholder='Email' required)
+							span.icon.is-right
+								span.iconify(data-icon='topcoat:email' data-inline='false')
+					//- pasw
+					.field.m-2
+						.control.is-expanded.has-icons-right
+							input.input.is-large(type='password' placeholder='Password' required)
+							span.icon.is-right
+								span.iconify(data-icon='fluent:lock-closed-20-filled' data-inline='false')
+					//- sbm
+					.field.m-4
+						.control
+							input.button.is-primary.is-large.is-rounded.has-text-weight-bold(type='submit' value='Sing in')
+script(src="js/app.js")

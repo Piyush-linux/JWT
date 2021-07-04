@@ -1,10 +1,17 @@
 // var
+#login{
+    display: none;
+}
+#reg_btn{
+    display: none;
+}
+
 
 // media
 @mixin mobile{
-@media screen and (max-width:750px){
-    @content;
-}
+    @media screen and (max-width:750px){
+        @content;
+    }
 }
 
 // pre
@@ -12,7 +19,11 @@ body,
 .button {
     font-family: Croissant One;
 }
-
+.blob{
+    position: fixed;
+    width: 11rem;
+    right:0;
+}
 .iconify {
     font-size: 2rem;
 }
@@ -32,23 +43,33 @@ body,
     align-items: center;
     justify-content: center;
 }
-
-.form_sec_1 {
+.column{
     height: 80vh;
 }
-
-.form_sec_2 {
-    height: 80vh;
+.input{
+    border-radius:0px;
+    border:none;
+    box-shadow: none;
+    border-bottom:3px solid grey;
 }
+// .form_sec_1 {
+// }
+
+// .form_sec_2 {
+    // height: 80vh;
+// }
 
 /* media */
 @media screen and (max-width: 750px) {
+    .section{
+        padding:0px;
+    }
     .form_sec_1 {
-        height: 70vh;
+        height: 100vh;
     }
 
     .form_sec_2 {
-        height: 80vh;
+        height: 90vh;
     }
 
     .h1 {

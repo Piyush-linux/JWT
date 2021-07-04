@@ -1,69 +1,61 @@
-.blob{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 25vh;
-}
+#login {
+  display: none; }
+
+#reg_btn {
+  display: none; }
+
 body,
 .button {
-    font-family: Croissant One;
-}
+  font-family: Croissant One; }
+
+.blob {
+  position: fixed;
+  width: 11rem;
+  right: 0; }
 
 .iconify {
-    font-size: 2rem;
-}
+  font-size: 2rem; }
 
 .h1 {
-    font-size: 3rem;
-    font-weight: bolder;
-}
+  font-size: 3rem;
+  font-weight: bolder; }
 
 .p1 {
-    font-size: 1.3rem;
-}
-
-.p2 {
-    font-size: 1rem;
-}
+  font-size: 1.3rem; }
 
 .cen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
-.form {
-    /*height: 90vh;*/
-}
+.column {
+  height: 80vh; }
 
-.form_sec_1 {
-    height: 80vh;
-}
-
-.form_sec_2 {
-    height: 80vh;
-}
+.input {
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  border-bottom: 3px solid grey; }
 
 /* media */
 @media screen and (max-width: 750px) {
-    .form_sec_1 {
-        height: 70vh;
-    }
+  .section {
+    padding: 0px; }
 
-    .form_sec_2 {
-        height: 80vh;
-    }
+  .form_sec_1 {
+    height: 100vh; }
 
-    .h1 {
-        font-size: 2rem;
-    }
+  .form_sec_2 {
+    height: 90vh; }
 
-    .p1 {
-        font-size: 1.1rem;
-    }
+  .h1 {
+    font-size: 2rem; }
 
-    .box {
-        padding: 0;
-    }
-}
+  .p1 {
+    font-size: 1.1rem; }
+
+  .box {
+    padding: 0; } }
+
+/*# sourceMappingURL=style.css.map */

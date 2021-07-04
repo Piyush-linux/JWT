@@ -1,6 +1,10 @@
+# TODO
 
+- [ ] connect F to B
+- [ ] F: login
+- [ ] F: profile
 - [ ] R&D : site's to deploy F+B app
-- [ ] future : usr del profile , update psw 
+- [ ] future : usr del profile , update psw
 
 
 > Remmebr to open mongodb atlas to begin operation or chenge IP but related to MongoDB_Atlas Only
@@ -10,8 +14,8 @@ https://ionify.com/
 ```yaml
 !Asset
 col: [pr: 1abc9c, bg: ecf0f1]
-fnt: 
-    
+fnt: Croissant One
+
 !wire
 col-1:
     - h1 > p10 > btn
@@ -56,7 +60,7 @@ col-2:
     - make rules & fields (Schema,model)
     - CRUD operation
 5. Data Validation
-    i. chk if data is valid
+    1. chk if data is valid
         - Validate
         - `npm i @hapi`
             - `rules = { attr : joi.rule1().rule() }`
@@ -64,7 +68,7 @@ col-2:
         - encrpt/decrypt : `npm i joi bcrypt`
             = encrypt( NormalPasw , encoder )
             = compare( userPsw , encodedPsw ) => T:usr_is_valid | F:usr_is_Invalid
-    ii. chk if data already exist in DB
+    2. chk if data already exist in DB
         - N : encrpt psw/id for that usr/data then register
         - Y : decode and compare with usr.psw then loggin
 6. JWT Token
