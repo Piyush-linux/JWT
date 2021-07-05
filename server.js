@@ -31,7 +31,7 @@ app.use('/profile',profile);
 
 // Server running
 app.listen(process.env.PORT || 3000,()=>{
-	console.log('running...')
+	console.log('http://localhost:3000 running...')
 })
 
 

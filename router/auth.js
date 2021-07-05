@@ -26,7 +26,7 @@ router.post('/register', async (req, res) => {
     try {
         const scc = await usr.save();
         console.log('pass');
-        res.send(scc);
+        res.redirect("/");
     }
     // fail opr
     catch (err) {
@@ -49,7 +49,7 @@ router.post("/login",async(req,res)=>{
     if(!psw_chk) return res.status(400).send("wrong eml or password")
     // JWT token(id,psw) : encode > append
     const token = jwt.sign({_id: usr._id },process.env.TOKEN)
-    res.header('auth-token',token).send(token)
+    res.header('auth-token',token).render("profile",{username:usr.name})
 })
 
 module.exports = router;

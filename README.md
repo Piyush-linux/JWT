@@ -1,7 +1,7 @@
 # TODO
 
 - [ ] connect F to B
-- [ ] F: login
+- [x] F: login
 - [ ] F: profile
 - [ ] R&D : site's to deploy F+B app
 - [ ] future : usr del profile , update psw
